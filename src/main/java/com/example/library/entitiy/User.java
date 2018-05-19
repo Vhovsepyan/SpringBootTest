@@ -17,7 +17,7 @@ public class User {
     private String name;
 
     @Column(name = "user_login")
-    private String login;
+    private String nick;
 
     @Column(name = "user_password")
     private String password;
@@ -32,7 +32,7 @@ public class User {
 
     public User(String name, String login, String password) {
         this.name = name;
-        this.login = login;
+        this.nick = login;
         this.password = password;
     }
 
@@ -52,12 +52,12 @@ public class User {
         this.name = name;
     }
 
-    public String getLogin() {
-        return login;
+    public String getNick() {
+        return nick;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setNick(String nick) {
+        this.nick = nick;
     }
 
     public String getPassword() {

@@ -10,13 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class LoginController {
-
+/*
     @Autowired
     private UserService userService;
 
     @RequestMapping("/")
     public String index(Model model){
-
         return "login_register/login";
     }
 
@@ -32,5 +31,5 @@ public class LoginController {
     @RequestMapping(params = "register")
     public String register(){
         return "login_register/register";
-    }
+    }*/
 }

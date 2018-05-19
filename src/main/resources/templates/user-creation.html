@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="#{app.title}"> Title </title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+<h1 th:text="#{app.create-user}">Create</h1>
+<form action="#" th:action="@{/create-user}" th:object="${user}" method="POST">
+    <table>
+        <tr><td th:text="#{user.name}"></td>
+            <td>
+                <input type="text" th:field="*{name}" />
+                <label th:if="${#fields.hasErrors('name')}" th:text="#{error.user.name}" th:class="'error'">Name Error</label>
+            </td>
+        </tr>
+
+        <tr><td th:text="#{user.nick}"></td>
+            <td>
+                <input type="text" th:field="*{nick}" />
+                <label th:if="${#fields.hasErrors('nick')}" th:text="#{error.user.nick}" th:class="'error'">Username Error</label>
+            </td>
+        </tr>
+
+        <tr><td th:text="#{user.password}"></td>
+            <td>
+                <input type="text" th:field="*{password}" />
+                <label th:if="${#fields.hasErrors('password')}" th:text="#{error.user.password}" th:class="'error'">Password Error</label>
+            </td>
+        </tr>
+
+        <tr><td colspan="2">
+            <input type="submit" th:value="#{user.form.submit}"/>
+            <input type="reset" th:value="#{user.form.reset}"/>
+        </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
